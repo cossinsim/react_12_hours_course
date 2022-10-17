@@ -1,0 +1,22 @@
+.main-content {
+    padding: 2em;
+    background-color: #282D35;
+    background-image: url("../assets/Main-background/reactjs-icon-2.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.main-title, .main-list {
+    color: #FFFFFF;
+}
+
+.main-title {
+    font-size: 39.06px;
+}
+
+.main-list li::marker {
+    color: #61DAFB;
+    list-style-position: outside;
+    font-size: 30px;
+    
+}

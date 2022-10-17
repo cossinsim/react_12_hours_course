@@ -1,0 +1,37 @@
+.navbar, .nav-left, .nav-right{
+    display: flex;
+}
+
+.navbar {
+    justify-content: space-around;
+    width: 100%;
+    background-color: #21222A;
+    height: 91px;
+}
+
+.nav-left, .nav-right {
+    align-items: center;
+}
+
+.nav-left {
+    justify-content: flex-start;
+    column-gap: 7px;
+    width: 146.93px;
+}
+
+.nav-right {
+    justify-content: flex-end;
+    width: 259px;
+}
+
+.nav-title {
+    font-size: 22.25px;
+    letter-spacing: -5%;
+    color: #61DAFB;
+}
+
+.nav-subtitle {
+    font-size: 16px;
+    color: #DEEBF8;
+    /* font-weight: semibold; A CHECKER */
+}
