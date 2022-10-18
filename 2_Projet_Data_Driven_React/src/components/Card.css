@@ -1,13 +1,6 @@
-.courses, .card, .lesson, .lesson-infos {
+.card, .lesson, .lesson-infos {
     display: flex;
     box-sizing: border-box;
-}
-
-.courses {
-    z-index: 0;
-    background-color: white;
-    flex-flow: row nowrap;
-    gap: 18px;
 }
 
 .card {
@@ -17,10 +10,12 @@
     font-size: 12px;
     font-weight: 300;
     flex-direction: column;
-    width: 176px;
+    /* width: 15em; */
+    /* width: 176px; */
+    width: 32%;
     row-gap: 9px;
     margin: 0;
-    /* box-shadow: 3px 10px 10px 3px rgb(221, 221, 221); */
+    box-shadow: 3px 10px 10px 3px rgb(221, 221, 221); 
     padding-bottom: 1em;
 }
 
