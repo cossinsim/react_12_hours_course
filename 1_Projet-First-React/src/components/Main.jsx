@@ -1,5 +1,6 @@
 import React from "react"
 import background from "../assets/Main-background/reactjs-icon-2.png"
+import Signature from "./Signature.jsx"
 import "./Main.css"
 
 export default function Main () {
@@ -13,6 +14,7 @@ export default function Main () {
                 <li>Is maintained by Facebook</li>
                 <li>Powers thousands of enterprise apps, including mobile apps</li>
             </ul>
+            <Signature />
         </section>
     )
 }

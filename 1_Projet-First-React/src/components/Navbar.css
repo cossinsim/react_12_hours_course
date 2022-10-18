@@ -1,12 +1,13 @@
 .navbar, .nav-left, .nav-right{
     display: flex;
+    box-sizing: border-box;
 }
 
 .navbar {
-    justify-content: space-around;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: #21222A;
-    height: 91px;
+    padding: 0.85em 2em;
 }
 
 .nav-left, .nav-right {
@@ -14,14 +15,13 @@
 }
 
 .nav-left {
+    flex-wrap: wrap;
     justify-content: flex-start;
     column-gap: 7px;
-    width: 146.93px;
 }
 
 .nav-right {
     justify-content: flex-end;
-    width: 259px;
 }
 
 .nav-title {

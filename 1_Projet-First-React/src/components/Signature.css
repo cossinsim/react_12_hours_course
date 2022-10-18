@@ -1,0 +1,17 @@
+.signature {
+    font-size: 0.5em;
+    position: relative;
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #61DAFB;
+}

@@ -1,9 +1,11 @@
 .main-content {
+    box-sizing: border-box;
     padding: 2em;
     background-color: #282D35;
     background-image: url("../assets/Main-background/reactjs-icon-2.png");
     background-repeat: no-repeat;
     background-position: right;
+    width: 100%;
 }
 
 .main-title, .main-list {
@@ -11,12 +13,23 @@
 }
 
 .main-title {
-    font-size: 39.06px;
+    font-size: 2.3em;
+    margin-bottom: 1em;
 }
 
 .main-list li::marker {
+    content: "\25CF";
     color: #61DAFB;
-    list-style-position: outside;
-    font-size: 30px;
-    
+    font-size: 1.2em;
+}
+
+.main-list li {
+    padding-left: 0.85em;
+    margin-top: 1em;
+}
+
+.main-list {
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 6em;
 }
