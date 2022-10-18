@@ -1,3 +1,121 @@
+/* 
+// PROPS 8 -> EXPLOITER DATA STOCKEE DANS UN FICHIER EXTERNE AVEC map()
+// TABLEAU D'OBJETS (format JS ou JSON) -> FICHIER EXTERNE
+// map(); ET CREER ELEMENTS JSX AVEC PROPS POUR CHAQUE OBJET DS TABLEAU data
+
+// Fichier Joke.js
+
+import React from "react"
+import Joke from "./Joke"
+import jokesData from "./jokesData" // importer data depuis fichier externe
+
+export default function App() {
+    const jokeElements = jokesData.map(joke => {
+        return <Joke setup={joke.setup} punchline={joke.punchline} />
+    })
+    return (
+        <div>
+            {jokeElements}
+        </div>
+    )
+}
+
+// FICHIER App.js
+
+import React from "react"
+import Joke from "./Joke"
+import jokesData from "./jokesData" // importer data depuis fichier externe
+
+export default function App() {
+    const jokeElements = jokesData.map(joke => {
+        return <Joke exempleProp={joke.setup} autreProp={joke.punchline} />
+    })
+    return (
+        <div>
+            {jokeElements}
+        </div>
+    )
+}
+
+/* 
+
+// PROPS 7 -> MAP UN ARRAY "CLASSIQUE" ET CREER DES ELEMENTS JSX, AVEC map();
+
+// POUR CHAQUE ELEM, RETURN UN h3
+
+export default function App() {
+    const colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]
+    return (
+        <div>
+            {colors.map(color => 
+            <h3>{color}</h3>
+            )}
+        </div>
+    )
+}
+
+*/
+
+/* 
+
+// PROPS 6 -> EXOS .map()
+
+//Given an array of numbers, return an array of each number, squared
+
+const nums = [1, 2, 3, 4, 5]
+// -->       [1, 4, 9, 16, 25]
+
+let numsSquared = nums.map(num => num * num);
+
+// Given an array of strings, return an array where 
+// the first letter of each string is capitalized
+
+const names = ["alice", "bob", "charlie", "danielle"]
+// -->        ["Alice", "Bob", "Charlie", "Danielle"]
+
+let namesCapitalized = names.map(name => name.charAt(0).toUpperCase + name.slice(1)
+
+// Given an array of strings, return an array of strings that wraps each
+// of the original strings in an HTML-like <p></p> tag.
+// E.g. given: ["Bulbasaur", "Charmander", "Squirtle"]
+// return: ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
+
+const pokemon = ["Bulbasaur", "Charmander", "Squirtle"]
+// -->          ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
+
+let pokemonsP = pokemon.map(poke => <p>poke</p>)
+
+// CORRECTION -> RAPPEL ! SYNTAXE BACKTICKS CLASSIQUE JS !!!
+
+const paragraphs = pokemon.map(mon => `<p>${mon}</p>`)
+
+*/
+
+/* 
+
+// PROPS 5 -> TOUS TYPES JS ACCEPTES, SYNTAXE CURLY BRACKETS { } A RESPECTER
+
+// Ici, on va passer une string, un booléen, des number, et un tableau
+// d'objets (ici, un seul objet pour taille code) comme props
+
+export default function App() {
+    return (
+        <div>
+            <Joke 
+                punchline="It’s hard to explain puns to kleptomaniacs because they always take things literally."
+                isPun={true}
+                upvotes={10}
+                downvotes={2}
+                comments={[
+									{author: "", body: "", title: ""}
+								]}
+            />
+				</div>
+		)
+}
+
+*/
+
 /*
 // PROPS 4 -> EXO GESTION AVEC / SANS PROPS 
 
