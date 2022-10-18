@@ -1,0 +1,65 @@
+.courses, .card, .lesson, .lesson-infos {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.courses {
+    z-index: 0;
+    background-color: white;
+    flex-flow: row nowrap;
+    gap: 18px;
+}
+
+.card {
+    background-color: white;
+    z-index: 1;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 300;
+    flex-direction: column;
+    width: 176px;
+    row-gap: 9px;
+    margin: 0;
+    /* box-shadow: 3px 10px 10px 3px rgb(221, 221, 221); */
+    padding-bottom: 1em;
+}
+
+.card:nth-child(1) {
+    margin-left: 22px;
+}
+
+.lesson {
+    padding: 0 1em;
+    row-gap: 4px;
+    flex-direction: column;
+}
+
+.lesson-infos {
+    margin: 0;
+    flex-flow: row wrap;
+    column-gap: 2px;
+    align-items: center;
+}
+
+.lesson-infos-star {
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+}
+
+.total-lesson-ratings::after {
+    content: "\2022";
+    margin-left: 2px;
+}
+
+.total-lesson-ratings, .teacher-location {
+    color: #918E9B;
+}
+
+.from-price {
+    font-weight: 600;
+}
+
+.lesson-description, .pricing  {
+    margin: 0;
+}

@@ -1,0 +1,32 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.intro {
+    padding: 0 30px;
+    background-color: white;
+}
+
+.intro-title {
+    font-size: 36px;
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.intro-paragraph {
+    font-size: 16px;
+    margin-top: 0.2em;
+    font-weight: 300;
+    width: 70%;
+}
+
+.cover-image {
+    z-index: 0;
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+    padding: 2em 4em 0 4em;
+}
