@@ -1,0 +1,17 @@
+a {
+    text-decoration: none;
+    color: #FF5A5F;
+}
+
+a:hover {
+    color: black;
+}
+
+.signature {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 15px 22px 15px 22px;
+    word-break: keep-all;
+    font-size: 9px;
+}

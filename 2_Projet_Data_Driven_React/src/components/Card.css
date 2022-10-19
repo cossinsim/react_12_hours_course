@@ -4,6 +4,7 @@
 }
 
 .card {
+    /* border: 0.1px solid lightgray; */
     background-color: white;
     z-index: 1;
     border-radius: 12px;
@@ -11,16 +12,32 @@
     font-weight: 300;
     flex-direction: column;
     /* width: 15em; */
-    /* width: 176px; */
-    width: 32%;
+    width: 176px;
     row-gap: 9px;
     margin: 0;
     box-shadow: 3px 10px 10px 3px rgb(221, 221, 221); 
     padding-bottom: 1em;
+    flex: 0 0 auto;  
+
+    /* AFFICHAGE DYNAMIQUE DU BADGE -> CSS-TRICKS */
+    /* POUR PLACER LA CARTE EN RELATIVE PAR RAPPORT A ELLE-MEME */
+    /* /* POINT DE REPERE DE LA POSITION = LA POSITION OU ELLE DEVRAIT SE TROUVER -> RELATIF A LA POSITION OU ELLE DEVRAIT SE TROUVER */
+    position: relative;
 }
 
 .card:nth-child(1) {
     margin-left: 22px;
+}
+
+.card-badge {
+    /* POUR PLACER LE BADGE EN ABSOLU PAR RAPPORT A LA CARD */
+    /* AFFICHAGE <CARD /> GENERE SANS COMPTER LA DIV badge EN ABSOLU */
+    position: absolute;
+    background-color: white;
+    margin: 1em;
+    padding: 0.2em 0.5em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
 }
 
 .lesson {
