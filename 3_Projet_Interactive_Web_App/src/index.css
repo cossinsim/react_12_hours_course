@@ -1,0 +1,13 @@
+#root {
+  font-family: 'Karla', Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
