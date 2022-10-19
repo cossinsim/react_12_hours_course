@@ -5,21 +5,38 @@ import memedata from "../data/memedata.js"
 
 function Meme () {
 
-    const memes = memedata.data.memes;
+    const [allMemeImages, setAllMemeImages] = useState(memedata);
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage: "",
+    });
+
+    /*
     const [memeImage, setMemeImage] = useState("");
-    const [memeWidth, setMemeWidth] = useState("");
-    const [memeHeight, setMemeHeight] = useState("");
-    
+    */
+
     // let randomMeme = "";
     // console.log(randomMeme);
 
     function getMeme () {
+        const memes = allMemeImages.data.memes;
         const rdm = Math.floor(Math.random() * memes.length);
         // console.log(memes[rdm]);
 
-        setMemeImage(memes[rdm].url)
-        setMemeWidth(memes[rdm].width)
-        setMemeHeight(memes[rdm].width)
+    setMeme(prev => ({
+        ...prev,
+        randomImage: memes[rdm].url,
+    }))   
+    /*
+    setMeme(prev => {
+        return {
+            ...prev,
+            randomImage: memes[rdm].url,
+        }
+    })
+    */
+
         /*
         randomMeme = {
             id: memes[rdm].id,
@@ -45,7 +62,7 @@ function Meme () {
                 </div>
                 <button onClick={getMeme} className="get-meme-button">Get a new meme image</button>
             </form>
-            {memeImage !== "" && <img className="meme-image" src={memeImage} alt="" />}
+            {meme.randomImage !== "" && <img className="meme-image" src={meme.randomImage} alt="" />}
         </section>
     )
 }
