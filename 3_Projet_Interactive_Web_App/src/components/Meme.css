@@ -1,0 +1,51 @@
+.memeGenerator, .meme-form, .text-inputs {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.memeGenerator {
+    flex-direction: column;
+}
+.meme-form, .text-inputs input, .get-meme-button {
+    font-family: 'Karla', Avenir, Helvetica, Arial, sans-serif;
+}
+
+.meme-form {
+    width: 100%;
+    padding: 2em;
+    flex-direction: column;
+}
+
+.text-inputs {
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: 1em;
+    column-gap: 1em;
+}
+
+.text-inputs input {
+    min-width: 3em;
+    flex: 1 1 auto;
+    line-height: 2em;
+    padding: 0.3em 0.5em;
+    border: 1px solid #D5D4D8;
+    border-radius: 6px;
+    text-indent: 6px;
+}
+
+.get-meme-button {
+    border: none;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0.7em;
+    border-radius: 6px;
+    background: linear-gradient(to right, #672280, #A626D3);
+}
+
+.memeGenerator .meme-image {
+    max-width: 100%;
+}
+
+/* MOUVEMENT DEGUEU QUAND MEME TROP GRAND */

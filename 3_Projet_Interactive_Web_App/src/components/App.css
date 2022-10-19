@@ -3,4 +3,5 @@
   flex-direction: column;
   max-width: 550px;
   margin: auto;
+  border-radius: 6px;
 }
