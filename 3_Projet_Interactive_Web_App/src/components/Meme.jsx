@@ -1,15 +1,17 @@
-import React from "react"
+import React, { useEffect } from "react"
 import {useState} from "react"
 import "./Meme.css"
-import memedata from "../data/memedata.js"
+import Signature from "./Signature.jsx"
+
+/* import memedata from "..data_remplacee_par_requete_apiDATA_REMPLACEE_PAR_REQUETE_API.js" */
 
 function Meme () {
 
-    const [allMemeImages, setAllMemeImages] = useState(memedata);
+    const [allMemeImages, setAllMemeImages] = useState([]);
     const [meme, setMeme] = useState({
         topText: "",
         bottomText: "",
-        randomImage: "http://i.imgflip.com/1bij.jpg",
+        randomImage: "",
     });
 
     function getMeme () {
@@ -31,6 +33,18 @@ function Meme () {
             }
         })
     }
+    
+    /* useEffect */
+
+    useEffect(function() { 
+        console.log("fetching API");
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemeImages(data))
+            .then(console.log("API FETCHED, DATA GATHERED INTO STATE"))
+    }, [])
+
+
 
     return (
         <section className="memeGenerator">
@@ -68,6 +82,7 @@ function Meme () {
                 <h2 className="meme-text bottom">{meme.bottomText}</h2>
             </div>
             }
+            <Signature className="signature" />
         </section>
     )
 }

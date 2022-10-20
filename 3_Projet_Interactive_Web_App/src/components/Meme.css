@@ -5,6 +5,7 @@
 
 .memeGenerator {
     flex-direction: column;
+    padding-bottom: 1em;
 }
 .meme-form, .text-inputs input, .get-meme-button {
     font-family: 'Karla', Avenir, Helvetica, Arial, sans-serif;
@@ -12,14 +13,13 @@
 
 .meme-form {
     width: 100%;
-    padding: 2em;
+    padding: 2em 2em 0 2em;
     flex-direction: column;
 }
 
 .text-inputs {
     flex-flow: row wrap;
     justify-content: center;
-    padding-bottom: 1em;
     column-gap: 1em;
 }
 
@@ -31,6 +31,7 @@
     border: 1px solid #D5D4D8;
     border-radius: 6px;
     text-indent: 6px;
+    margin-bottom: 1em;
 }
 
 .get-meme-button {
@@ -46,6 +47,7 @@
 
 .memeGenerator .meme-image {
     max-width: 100%;
+    border-radius: 3px;
 }
 
 /* MOUVEMENT DEGUEU QUAND MEME TROP GRAND */
@@ -54,6 +56,7 @@
 
 .meme-result {
     position: relative;
+    padding: 2em 2em 0 2em;
 }
 
 .meme-text {
@@ -82,9 +85,9 @@
 }
 
 .bottom {
-    bottom: 0;
+    bottom: 1em;
 }
 
 .top {
-    top: 0;
+    top: 1em;
 }
